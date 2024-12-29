@@ -146,7 +146,7 @@ input{
     outline: none;
     background: transparent;
     flex-grow: 1;
-    font-size: 10px;
+    font-size: 13px;
 }
 .bottom-info{
     margin-top: 5px;
