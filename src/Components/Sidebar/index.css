@@ -7,12 +7,12 @@
     justify-content: space-between;
     min-height: 100vh;
     background-color: #f0f4f9;
-    padding: 25px 20px;
+    padding: 15px 15px;
 }
 .new-chat{
     background-color: #e6eaf1;
     border-radius: 50px;
-    margin-top: 40px;
+    margin-top: 35px;
     padding: 10px 15px;
     display: inline-flex;
     color: gray;
@@ -21,8 +21,8 @@
     cursor: pointer;
 }
 .recent-cont{
-    overflow-y: scroll;
-    height: 38vh;
+    overflow-y: auto;
+    height: calc(100vh - 120px);
 }
 .recent-cont::-webkit-scrollbar{
     display: none;
@@ -92,7 +92,7 @@
   .sidebar.collapsed .settings p {
     opacity: 0;
   }
-  @media (max-width:800px){
+  @media (min-width:576px) and (max-width:800px){
     .sidebar{
         display: inline-flex;
         flex-direction: column;
@@ -147,5 +147,74 @@
     }
     .bottom div img{
         width: 15px;
+    }
+    .recent-cont{
+        overflow-y: scroll;
+        height: calc(100vh - 100px);
+    }
+    .recent-cont::-webkit-scrollbar{
+        display: none;
+    }
+  }
+  @media (max-width:575px){
+    .sidebar{
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
+        background-color: #f0f4f9;
+        padding:10px 10px;
+    }
+    .sidebar img{
+        width: 12px;
+    }
+    .new-chat{
+        background-color: #e6eaf1;
+        border-radius: 50px;
+        margin-top: 40px;
+        padding: 5px;
+        gap: 5px;
+        display: inline-flex;
+        color: gray;
+        font-size: 8px;
+        align-items: center;
+        cursor: pointer;
+    }
+    .new-chat img{
+        width: 16px;
+    }
+    .recent-title{
+        margin-top: 25px;
+        margin-bottom: 15px;
+        font-size: 10px;
+        padding-left: 3px;
+    }
+    .recent-entry{
+        color: #282828;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+        width: 150px;
+        font-size: 10px;
+        border-radius: 50px;
+    }
+    .help,.settings,.activity{
+        display: flex;
+        align-items: center;
+        gap:10px;
+        font-size: 8px;
+        cursor: pointer;
+        border-radius: 50px;
+        margin-bottom: 10px;
+        padding: 0;
+    }
+    .recent-cont{
+        overflow-y: scroll;
+        height: calc(100vh - 90px);
+    }
+    .recent-cont::-webkit-scrollbar{
+        display: none;
     }
   }

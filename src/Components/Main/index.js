@@ -143,7 +143,7 @@ class Main extends Component {
                       onChange={this.setPrompt}
                       value={Prompt}
                     />
-                    <div>
+                    <div className="input-images">
                       <img src={assets.gallery_icon} alt="gallery-icon" />
                       <img src={assets.mic_icon} alt="mic-icon" />
                       {Prompt.length !== 0 ? (
